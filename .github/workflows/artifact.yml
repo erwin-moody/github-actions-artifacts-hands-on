@@ -14,7 +14,7 @@ jobs:
       run: echo "Hello, world!" > hello.txt
 
     - name: Archive text file
-      uses: actions/upload-artifact@4.6.2
+      uses: actions/upload-artifact@4
       with:
         name: hello-artifact
         path: hello.txt
@@ -25,7 +25,7 @@ jobs:
 
        steps:
        - name: Download Text file
-         uses: actions/download-artifact@4.6.2
+         uses: actions/download-artifact@4
          with:
           name: hello-file
           path: ./artifacts
@@ -34,6 +34,7 @@ jobs:
          run: cat ./artifacts/hello.txt  
 
         
+
 
 
 
